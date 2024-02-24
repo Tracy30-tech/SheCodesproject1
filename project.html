@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Copy code1 below from google fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   
     <title>TRACY</title>
+
     <style>
         body{
             background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/511/original/keith-misner-h0Vxgz5tyXA-unsplash.jpg?1706952852);
@@ -33,6 +40,10 @@
             border-style: solid;
             border-color: #d8d355;
             line-height: 1.5;
+/* Also Copy code2 below from google fonts */
+            font-family:"Philosopher", sans-serif;
+            font-weight: 400;
+            font-style: normal;
         }
         strong{
             text-decoration: underline;
@@ -55,14 +66,17 @@
           box-shadow:  0 4px 15px 0 rgba(126, 155, 25, 0.24),0 5px 50px 0 rgb(193, 4, 48);
           color: white;
           background: #F05592;
+          cursor: pointer;
         }
          .genres{
-            list-style: none;
+            display: flex;
+            justify-content: space-around;
             
          }
          .genre{
-            display: inline;
+            list-style: none;
             margin: 3px 20px;
+            /* display: inline    ####### If you use this code here, remove display(flex)  & justify-content(center) in .genres */
 
          }
          a{
@@ -118,7 +132,11 @@
             <div class="left">
                 <p>Reille Novel Hub is a very special platform where you can read the translated versions of world famous Japanese, Chinese and Korean Reille novels in English. Every new chapters published by the author is updated instantly on the Reille Novel Hub and notification service is provided to the readers.</p>
                 <p>The aim of the platform is to bring together the  <strong> genres of Reille novel and web novel </strong> and allow you to read and follow them through a single source.</p>
-                <p>Start reading now to explore this mysterious fantasy world. </p>
+                <p>
+                    <a href="shecodes3.html" target="blank" title="SheCodes">Start reading now</a> 
+                    <!-- to link project.html file to shecodes3.html file -->
+                    to explore this mysterious fantasy world.
+                 </p>
                 <p> In the meantime, there are many features that will maximize your reading quality.</p>
                 <ul>
                     <li>With the member system, you can add the novel you follow to your library and see your progress.</li>
@@ -135,9 +153,9 @@
                 <h3  class="start"> Reille Genre novels</h3>
                 <div>
                     <ul class="genres">
-                        <li class="genre"><a href="https://www.oprahdaily.com/entertainment/books/a29576863/types-of-book-genres/">Horror</a> </li>
+                        <li class="genre"><a href="https://www.oprahdaily.com/entertainment/books/a29576863/types-of-book-genres/" target="_blank" title="tracy movies">Horror</a> </li>
                         <li class="genre"> <a href="https://www.oprahdaily.com/entertainment/books/a29576863/types-of-book-genres/">Fantansy</a></li>
-                        <li class="genre"> <a href="https://www.oprahdaily.com/entertainment/books/a29576863/types-of-book-genres/">Romance</a></li>
+                        <li class="genre"> <a href="https://www.oprahdaily.com/entertainment/books/a29576863/types-of-book-genres/" target="_blank" title="tracy movies">Romance</a></li>
                         <li class="genre"><a href="https://www.oprahdaily.com/entertainment/books/a29576863/types-of-book-genres/">Others</a> </li>
                     </ul>
                 </div>
@@ -160,6 +178,13 @@
                 </div>
 
             </div>
+
+            <form>
+                <label for=""></label>
+                <input type="text">
+                <button type="submit"></button>
+            </form>
+            
             
         </section>
     </div>
@@ -222,6 +247,8 @@ function changeHeading(uptodateHeading) {
     let subHeading = document.querySelector(".start");
     subHeading.innerHTML = uptodateHeading;
 }
+
+
 
 function giveFeedback(name) {
     let genre = prompt("What genre of novel are you interested in");
